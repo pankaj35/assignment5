@@ -171,17 +171,17 @@ h4 {
     }
     h1 {
         font-size: 30px;
-        margin-left: 11%;
+        margin-left: 13%;
     }
     h4 {
         font-size: 16px;
     }
     .inner-box {
         width: 80%;
-        padding-left: 4%;
+        padding-left: 5%;
     }
     .image {
-        padding: 50px;
+        padding: 33px;
     }
     .inner-box:nth-child(1) {
         margin-left: -2%;
@@ -192,9 +192,27 @@ h4 {
     .inner-box:nth-child(3) {
         margin-left: -2%;
     }
+    .inner-box:nth-child(4) {
+        margin-left: -2%;
+    }
+    .inner-box:nth-child(5) {
+        margin-left: -2%;
+    }
+    .inner-box:nth-child(6) {
+        margin-left: -2%;
+    }
+    .inner-box:nth-child(7) {
+        margin-left: -2%;
+    }
+    .inner-box:nth-child(8) {
+        margin-left: -2%;
+    }
+    .inner-box:nth-child(9) {
+        margin-left: -2%;
+    }
     .line {
-        width: 76%;
-        margin-right: 13%;
+        width: 73%;
+        margin-right: 15%;
     }
 }
 
