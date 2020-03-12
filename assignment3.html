@@ -1,0 +1,55 @@
+<html>
+
+<head></head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<body>
+    <table border="1" id="myTable">
+        <tr>
+            <th>user id</th>
+            <th>id</th>
+            <th>Name</th>
+            <th>email</th>
+            <th>message</th>
+        </tr>
+    </table>
+    <script>
+        var tr;
+        var td, td2, td3, table, table2, table3;
+        var y = 5;
+        var key = 1;
+        setInterval(function () {
+            fetch('https://jsonplaceholder.typicode.com/comments')
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                // console.log(data);
+                var finalRows = data.splice(((key - 1) * y), y);
+                console.log(finalRows.length);
+                
+                for (var i = 0; i < finalRows.length; i++) {
+                    var tr = document.createElement('tr');
+                    var table = document.getElementById("myTable");
+                    var datatable = Object.keys(data[i]);
+                    datatable.forEach(value => {
+                        var td = document.createElement('td');
+
+                        td.append(data[i][value]);
+                        tr.append(td);
+                    });
+
+                    table.append(tr);
+                    
+                    
+                }
+                key++;
+            })
+        }, 3000);
+
+
+
+    </script>
+</body>
+
+</html>
