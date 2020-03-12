@@ -1,8 +1,6 @@
 <html>
-
 <head></head>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
 <body>
     <table border="1" id="myTable">
         <tr>
@@ -23,8 +21,7 @@
             .then(response => {
                 return response.json()
             })
-            .then(data => {
-                // console.log(data);
+            .then(data => {                
                 var finalRows = data.splice(((key - 1) * y), y);
                 console.log(finalRows.length);
                 
@@ -34,22 +31,17 @@
                     var datatable = Object.keys(data[i]);
                     datatable.forEach(value => {
                         var td = document.createElement('td');
-
                         td.append(data[i][value]);
                         tr.append(td);
                     });
-
-                    table.append(tr);
-                    
-                    
+                    table.append(tr);                   
                 }
                 key++;
             })
-        }, 3000);
-
-
-
+            .catch(err => {
+            return err;
+            })
+        }, 1000);
     </script>
 </body>
-
 </html>
